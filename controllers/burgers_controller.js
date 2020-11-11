@@ -9,30 +9,23 @@ router.get("/", function (req, res) {
     var hbsObject = {
       burgers: data,
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 // post new ones from user inputs
 
-router.post("/burgers", function (req, res) {
-  burger.insertOne(["burger_name"], [req.body.burger_name], function () {
+router.post("/api/burgers", function (req, res) {
+  burger.insertOne([req.body.burger_name], function () {
     res.redirect("/");
   });
 });
 
-router.put("/burgers/:id", function (req, res) {
-  var idBurger = "id = " + req.prams.id;
-  burger.updateOne(
-    {
-      devoured: true,
-    },
-    idBurger,
-    function (data) {
-      res.direct("/");
-    }
-  );
+router.put("/api/burgers/:id", function (req, res) {
+  var id = req.prams.id;
+  burger.updateOne(id, function () {
+    res.direct("/");
+  });
 });
 
 module.exports = router;
