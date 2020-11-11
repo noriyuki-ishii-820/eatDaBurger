@@ -5,27 +5,30 @@
 <div>
     <ul>
         {{#each burgers}}
-        {{#if devoured = true}}
+        {{#unless this.devoured}}
         <li>
-            <p>{{this.burger_name}}</p>
+            <p>{{this.burger_name}} <button type="submit">Devour it!</button></p>
         </li>
-        {{/if}}
+        {{/unless}}
         {{/each}}
     </ul><!-- uneaten burgers -->
 
 </div>
 
+<h2>Burgers Eaten</h2>
+
 <div>
     <ul>
         <!-- eaten burgers -->
         {{#each burgers}}
-        {{#if devoured = false}}
+        {{#if this.devoured}}
         <li>
             <p>{{this.burger_name}}</p>
+
         </li>
         {{/if}}
         {{/each}}
-        <button type="submit">Devour it!</button>
+
     </ul>
 
 </div>
