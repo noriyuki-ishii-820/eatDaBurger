@@ -1,7 +1,7 @@
 // Dependencies
 
 var express = require("express");
-var PORT = process.env.PORT || 3001;
+var PORT = process.env.PORT || 3002;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
