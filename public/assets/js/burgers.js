@@ -18,7 +18,21 @@ $(function () {
     });
   });
 
+  $(".trash").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr("data-id");
+
+    $.ajax("/api/burgers/" + id, {
+      type: "DELETE",
+    }).then(function () {
+      console.log("Deleted!");
+      location.reload();
+    });
+  });
+
   $(".create-form").on("submit", function (event) {
+    event.preventDefault();
+
     var newBurger = {
       burger_name: $("#burgerText").val().trim(),
       devoured: false,
@@ -29,7 +43,7 @@ $(function () {
       data: newBurger,
     }).then(function () {
       console.log("Inserted the new burger!");
-      location.reload;
+      location.reload();
     });
   });
 });

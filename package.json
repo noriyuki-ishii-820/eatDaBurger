@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/noriyuki-ishii-820/eatDaBurger#readme",
   "dependencies": {
+    "bulma": "^0.9.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1",
