@@ -15,7 +15,8 @@
 
 I have created a burger logger utilizing the power of MySQL, Node, Express, Handlebars and a homemade ORM. This application has followed the MVC design pattern, using Node and MySQL to query and route data in the app, and Handlebars to generate the HTML file.
 
-Please find the deployed application from here:
+Please find the deployed application from here deloyed on Heroku:
+https://pacific-castle-30838.herokuapp.com/
 
 ## Technologies used
 
