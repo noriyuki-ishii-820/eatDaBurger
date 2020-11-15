@@ -33,6 +33,13 @@ $(function () {
   $(".create-form").on("submit", function (event) {
     event.preventDefault();
 
+    var userInput = $("#burgerText").val().trim();
+
+    if (userInput == "") {
+      alert("Invalid input. Please try again!");
+      location.reload();
+    }
+
     var newBurger = {
       burger_name: $("#burgerText").val().trim(),
       devoured: false,
