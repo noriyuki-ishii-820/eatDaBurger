@@ -7,11 +7,11 @@
 
 <div class="columns is-centered mainSection">
     <div class="column is-one-quarter box">
-        <h2 class="burgerHead">Burgers Available</h2>
+        <h2 class="burgerHead"><i class="fas fa-hamburger"></i> Burgers Available <i class="fas fa-hamburger"></i></h2>
         <ul>
             {{#each burgers}}
             {{#unless this.devoured}}
-            <li>{{this.burger_name}} <button type="button" class="devour button is-link"
+            <li>{{this.burger_name}} <button type="button" class="devour button is-link" node
                     data-id="{{this.id}}">Devour!</button></li>
             {{/unless}}
             {{/each}}
@@ -19,7 +19,7 @@
     </div>
 
     <div class="column is-one-quarter box">
-        <h2 class="burgerHead">Burgers Devoured</h2>
+        <h2 class="burgerHead"><i class="fas fa-utensils"></i> Burgers Devoured <i class="fas fa-utensils"></i></h2>
         <ul>
             {{#each burgers}}
             {{#if this.devoured}}
