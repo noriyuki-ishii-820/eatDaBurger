@@ -21,6 +21,7 @@ https://pacific-castle-30838.herokuapp.com/
 ## Technologies used
 
 - JavaScript
+- Handlebars.js
 - Node
 - Express
 - MySQL
@@ -28,6 +29,7 @@ https://pacific-castle-30838.herokuapp.com/
 - HTML
 - CSS
 - [Bulma CSS](https://bulma.io/)
+- npm packages
 
 ## How to install dependencies
 
